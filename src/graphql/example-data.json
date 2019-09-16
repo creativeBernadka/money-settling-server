@@ -1,0 +1,47 @@
+[
+  {
+    "id": 2,
+    "name": "wycieczka 2",
+    "nickNames": ["A", "B", "C"],
+    "payments": [
+      {
+        "whoPayed": "A",
+        "forWhom": ["A", "B"],
+        "howMany": 23.45
+      }, {
+        "whoPayed": "B",
+        "forWhom": ["A", "B", "C"],
+        "howMany": 6
+      }
+    ],
+    "summary": [
+      {
+        "whoPays": "A",
+        "whomPays": "B",
+        "howMany": 10.54
+      }
+    ]
+  }, {
+  "id": 1,
+  "name": "wycieczka 1",
+  "nickNames": ["A", "B", "C"],
+  "payments": [
+    {
+      "whoPayed": "A",
+      "forWhom": ["A", "B"],
+      "howMany": 23.45
+    }, {
+      "whoPayed": "B",
+      "forWhom": ["A", "B", "C"],
+      "howMany": 6
+    }
+  ],
+  "summary": [
+    {
+      "whoPays": "A",
+      "whomPays": "B",
+      "howMany": 10.54
+    }
+  ]
+}
+]
