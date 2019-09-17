@@ -5,6 +5,9 @@ const schema = buildSchema(`
         history: [HistoryElement]
         historyItem(id: Int!): HistoryElement
     },
+    type Mutation {
+        insertHistoryItem(historyElement: HistoryElement): HistoryElement
+    }
     type HistoryElement {
         id: Int
         name: String
