@@ -2,14 +2,12 @@ const data = require('./example-data');
 const historyItem = require('../mongodb/schema');
 
 const getHistory = function (args) {
-  return data;
+  return historyItem.find({});
 };
 
 const getHistoryItem = function (args) {
-  const id = args.id;
-    return data.filter(item => {
-        return item.id === id;
-    })[0];
+    const id = args.id;
+    return historyItem.findOne({id: id});
 };
 
 const insertHistoryItem = function (args) {
