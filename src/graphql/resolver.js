@@ -1,4 +1,3 @@
-const data = require('./example-data');
 const historyItem = require('../mongodb/schema');
 
 const getHistory = function (args) {
@@ -7,7 +6,7 @@ const getHistory = function (args) {
 
 const getHistoryItem = function (args) {
     const id = args.id;
-    return historyItem.findOne({id: id});
+    return historyItem.findOne({_id: id});
 };
 
 const insertHistoryItem = function (args) {

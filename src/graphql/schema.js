@@ -3,13 +3,13 @@ const {buildSchema} = require('graphql');
 const schema = buildSchema(`
     type Query {
         history: [HistoryElement]
-        historyItem(id: Int!): HistoryElement
+        historyItem(id: ID!): HistoryElement
     },
     type Mutation {
         insertHistoryItem(historyElement: HistoryElementInput): HistoryElement
     },
     type HistoryElement {
-        id: Int
+        id: ID
         name: String
         nickNames: [String]
         payments: [Payment]
@@ -26,7 +26,6 @@ const schema = buildSchema(`
         howMany: Float
     },
     input HistoryElementInput {
-        id: Int
         name: String
         nickNames: [String]
         payments: [PaymentInput]
