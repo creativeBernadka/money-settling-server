@@ -7,6 +7,7 @@ const schema = buildSchema(`
     },
     type Mutation {
         insertHistoryItem(historyElement: HistoryElementInput): HistoryElement
+        updateHistoryItem(id: ID!, historyElement: HistoryElementInput): HistoryElement
     },
     type HistoryElement {
         id: ID
@@ -16,7 +17,7 @@ const schema = buildSchema(`
         summary: [Settlement]
     },
     type Payment {
-        whoPayed: String!
+        whoPayed: String
         forWhom: [String]
         howMany: Float
     },
@@ -32,7 +33,7 @@ const schema = buildSchema(`
         summary: [SettlementInput]
     },
     input PaymentInput {
-        whoPayed: String!
+        whoPayed: String
         forWhom: [String]
         howMany: Float
     },

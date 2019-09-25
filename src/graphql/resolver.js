@@ -18,10 +18,16 @@ const insertHistoryItem = function (args) {
     return historyElement
 };
 
+const updateHistoryItem = function (args) {
+    const id = args.id;
+    return historyItem.findOneAndUpdate({_id: id}, args.historyElement);
+};
+
 const root = {
     history: getHistory,
     historyItem: getHistoryItem,
-    insertHistoryItem: insertHistoryItem
+    insertHistoryItem: insertHistoryItem,
+    updateHistoryItem: updateHistoryItem
 };
 
 module.exports = root;
